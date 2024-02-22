@@ -8,7 +8,16 @@
 
 // Your code:
 export const parametrize = (input) => {
-
+    let output = ""
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === ' ') {
+            output += '-';
+        }
+        else {
+            output += input[i].toLowerCase();
+        }
+    }
+    return output;
 };
 
 // 2 =================================
@@ -19,7 +28,7 @@ export const parametrize = (input) => {
 
 // Your code:
 export const giveSentenceForPerson = (obj) => {
-
+    return `Hello ${obj.name} from ${obj.location}! It is nice to meet you! You look awesome for your ${obj.age}, young ${obj.position}`;
 };
 
 // 3 =================================
@@ -29,5 +38,14 @@ export const giveSentenceForPerson = (obj) => {
 
 // Your code:
 export const replace = (input) => {
-
+    let output = "";
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === 'a' || input[i] === 'e' || input[i] === 'i' || input[i] === 'o') {
+            output += '*';
+        }
+        else {
+            output += input[i];
+        }
+    }
+    return output;
 };
